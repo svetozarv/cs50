@@ -37,11 +37,12 @@ def login_required(f):
 def lookup(symbol):
     """Look up quote for symbol."""
 
-    my_token = 'pk_8e00290ee2f94702b579c6a91982b6b8'
+    my_token = '' # your token here 
 
     # Contact API
     try:
         response = requests.get(f"https://cloud.iexapis.com/stable/stock/{urllib.parse.quote_plus(symbol)}/quote?token={my_token}")
+        print(response.content)
         response.raise_for_status()
     except requests.RequestException:
         return None

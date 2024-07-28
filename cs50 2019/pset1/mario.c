@@ -1,4 +1,5 @@
-#include <cs50.h>
+#include "../__includes__/cs50.h"
+#include "../__includes__/cs50.c"
 #include <stdio.h>
 
 int main(void)
